@@ -1,0 +1,7 @@
+user_auth/migrations/*
+!user_auth/migrations/__init__.py
+
+inventario/migrations/*
+!inventario/migrations/__init__.py
+
+db.sqlite3
