@@ -1,13 +1,17 @@
-# Entorno virtual
-venv/
+# Entorno virtual en backend
+backend/venv/
+
+# Base de datos de desarrollo
+backend/db.sqlite3
 
 # Archivos de Python
 *.pyc
 __pycache__/
 
-# Base de datos local
-db.sqlite3
+# Archivos temporales de frontend (opcional si usas frameworks como React o Angular)
+frontend/node_modules/
+frontend/build/
 
-# Configuración de IDEs
+# Archivos de configuración de IDE
 .vscode/
 .idea/
