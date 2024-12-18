@@ -1,0 +1,135 @@
+Screen {
+  align: center middle;
+  layers: bot top;
+}
+
+AppContainerWidget {
+  width: 60w;
+  height: 70h;
+}
+
+#widget-name {
+  offset: 3 0;
+  border: solid white 70%;
+  content-align: center middle;
+  layer: top;
+}
+
+#child-container {
+  border: solid white 70%;
+  width: 100w;
+  height: 100h;
+  layer: bot;
+  margin-top: 1;
+  align: center middle;
+  layer: bot;
+}
+
+#menu-container {
+  width: 30w;
+  height: 50h;
+  layer: bot;
+}
+
+#login-button {
+  dock: top;
+  width: 100w;
+  layer: bot;
+}
+
+#signup-button {
+  dock: bottom;
+  width: 100w;
+  layer: bot;
+}
+
+LoginFormWidget {
+  align: center middle;
+  layers: bot top;
+}
+
+SignUpFormWidget {
+  align: center middle;
+  layers: bot top;
+}
+
+.form-widget {
+  width: 60w;
+  height: 70h;
+}
+
+.form-name {
+  offset: 3 0;
+  border: solid white 70%;
+  content-align: center middle;
+  layer: top;
+}
+
+.form-main-container {
+  border: solid white 70%;
+  width: 100w;
+  height: 100h;
+  layer: bot;
+  margin-top: 1;
+  align: center middle;
+  layer: bot;
+}
+
+.form-menu-container {
+  width: 50w;
+  height: 70h;
+  layer: bot;
+}
+
+.form-username-label {
+  width: 100w;
+}
+
+.form-username-input {
+  border: solid white 70%;
+  width: 100w;
+}
+
+.form-email-label {
+  width: 100w;
+}
+
+.form-email-input {
+  border: solid white 70%;
+  width: 100w;
+}
+
+.form-passwd-label {
+  width: 100w;
+}
+
+.form-passwd-input {
+  border: solid white 70%;
+  width: 100w;
+}
+
+.form-button-container {
+  align: center middle;
+  width: 100w;
+  height: 3;
+  dock: bottom;
+}
+
+.submit-button {
+  height: 100h;
+  width: auto;
+  dock: left;
+}
+
+.cancel-button {
+  height: 100h;
+  width: auto;
+  dock: right;
+}
+
+
+
+
+
+
+
