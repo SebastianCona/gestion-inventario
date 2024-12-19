@@ -16,4 +16,8 @@ urlpatterns = router.urls  # Estas son las rutas generadas por el DefaultRouter
 # Añadir la ruta manual para exportar productos
 urlpatterns = [
     path('productos/exportar/', exportar_productos_csv, name='exportar_productos'),
+    path('categorias/', CategoriaViewSet.as_view({'get': 'list'}), name='categorias'),
+    path('productos/', ProductoViewSet.as_view({'get': 'list'}), name='productos'),
+    path('clientes/', ClienteViewSet.as_view({'get': 'list'}), name='clientes'),
+    path('pedidos/', PedidoViewSet.as_view({'get': 'list'}), name='pedidos'),
 ]
