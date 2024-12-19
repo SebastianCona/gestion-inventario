@@ -4,27 +4,33 @@ import httpx
 
 class SessionManager:
     def __init__(self, request_data):
-        self.url = "http://localhost:8000/auth/register"
+        self.base_url = "http://localhost:8000"
         self.request_data = request_data
         self.headers = {"Content-Type": "application/json"}
-
-    def to_json(self) -> str:
-        """
-        Convert the dictionary to a JSON string.
-        
-        Returns:
-            str: JSON-formatted string of the dictionary.
-        """
-        try:
-            return json.dumps(self.data)
-        except (TypeError, ValueError) as e:
-            raise ValueError(f"Invalid data format: {e}")
+        self.refresh_token = ""
+        self.access_token = ""
 
     async def auth_register(self):
+        endpoint = self.base_url + "/auth/register"
         async with httpx.AsyncClient() as client:
             response = await client.post(
-                self.url, json=self.request_data, headers=self.headers
+                endpoint, json=self.request_data, headers=self.headers
             )
             response.raise_for_status()  # Raise an exception for HTTP errors
             return response
+
+    async def auth_login(self):
+        endpoint = self.base_url + "/auth/login"
+        async with httpx.AsyncClient() as client:
+            response = await client.post(
+                endpoint, json=self.request_data, headers=self.headers
+            )
+            response.raise_for_status()  # Raise an exception for HTTP errors
+            
+            jwt_tokens = response.json()  # Store the JSON response that contains access and refresh tokens
+            
+            access_token = jwt_tokens.get("access")
+            refresh_token = jwt_tokens.get("refresh")
+            
+            return response 
     
