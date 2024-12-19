@@ -45,31 +45,30 @@ AppContainerWidget {
 
 LoginFormWidget {
   align: center middle;
-  layers: bot top;
+  layers: bot mid top;
 }
 
 SignUpFormWidget {
   align: center middle;
-  layers: bot top;
+  layers: bot mid top;
 }
 
 .form-widget {
   width: 60w;
-  height: 70h;
+  height: 90h;
 }
 
 .form-name {
   offset: 3 0;
   border: solid white 70%;
   content-align: center middle;
-  layer: top;
+  layer: mid;
 }
 
 .form-main-container {
   border: solid white 70%;
   width: 100w;
   height: 100h;
-  layer: bot;
   margin-top: 1;
   align: center middle;
   layer: bot;
@@ -77,35 +76,47 @@ SignUpFormWidget {
 
 .form-menu-container {
   width: 50w;
-  height: 70h;
-  layer: bot;
+  height: 80h;
+  layer: top;
 }
 
 .form-username-label {
   width: 100w;
+  height: 10h;
+  layer: top;
 }
 
 .form-username-input {
-  border: solid white 70%;
   width: 100w;
+  height: 3;
+  content-align: left middle;
+  layer: top;
 }
 
 .form-email-label {
   width: 100w;
+  height: 10h;
+  layer: top;
 }
 
 .form-email-input {
-  border: solid white 70%;
   width: 100w;
+  height: 3;
+  content-align: left middle;
+  layer: top;
 }
 
 .form-passwd-label {
   width: 100w;
+  height: 10h;
+  layer: top;
 }
 
 .form-passwd-input {
-  border: solid white 70%;
   width: 100w;
+  height: 3;
+  content-align: left middle;
+  layer: top;
 }
 
 .form-button-container {
@@ -113,18 +124,21 @@ SignUpFormWidget {
   width: 100w;
   height: 3;
   dock: bottom;
+  layer: top;
 }
 
 .submit-button {
   height: 100h;
   width: auto;
   dock: left;
+  layer: top;
 }
 
 .cancel-button {
   height: 100h;
   width: auto;
   dock: right;
+  layer: top;
 }
 
 

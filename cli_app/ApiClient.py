@@ -32,7 +32,7 @@ class SignUpFormWidget(Screen):
                     yield Label("Username:", classes="form-username-label")
                     yield Input(classes="form-username-input")
                     yield Label("Email:", classes="form-email-label")
-                    yield Input(placeholder="example@email.com", classes="form-text-input")
+                    yield Input(placeholder="example@email.com", classes="form-email-input")
                     yield Label("Password:", classes="form-passwd-label")
                     yield Input(classes="form-passwd-input", password=True)
                     with Horizontal(classes="form-button-container"):
