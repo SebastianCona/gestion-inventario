@@ -3,6 +3,10 @@ Screen {
   layers: bot top;
 }
 
+Toast {
+  margin: 3;
+}
+
 AppContainerWidget {
   width: 60w;
   height: 70h;
